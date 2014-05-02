@@ -5,7 +5,7 @@ require "prawn"
 
 module Basmoura
   class BasmouraPdf
-    def generate
+    def self.generate
       Prawn::Document.generate("basmoura.pdf", page_size: "A4") do
         basmoura = BasmouraApi.new
         text "Breno Augusto Santana Moura", size: 18, style: :bold, align: :center
